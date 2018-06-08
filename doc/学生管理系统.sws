@@ -4,8 +4,8 @@
 
 <Workspace>
 	<Local Expanded="Yes" Name="学生管理系统">
-		<Model Expanded="Yes" ID="{39848D27-126B-44DF-91D8-658ADDA6A6B5}" Name="register" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="学生管理系统/register.pdm"/>
-		<Model Expanded="Yes" ID="{E2273772-6AA2-45AF-8F8B-7C4B73A418A0}" Name="Register UML Sequence" Selected="Yes" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="学生管理系统/登录系统流程图.oom"/>
+		<Model Expanded="Yes" ID="{39848D27-126B-44DF-91D8-658ADDA6A6B5}" Loaded="No" Name="register" Selected="Yes" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="学生管理系统/register.pdm"/>
+		<Model Expanded="Yes" ID="{E2273772-6AA2-45AF-8F8B-7C4B73A418A0}" Loaded="No" Name="Register UML Sequence" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="学生管理系统/登录系统流程图.oom"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>
