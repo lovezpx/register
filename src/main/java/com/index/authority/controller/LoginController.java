@@ -8,17 +8,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.index.authority.bean.User;
+import com.index.authority.service.ILoginService;
 import com.index.authority.util.AuthConfig;
 import com.index.authority.util.CookiesUtil;
 import com.index.authority.util.TokenUtil;
 import com.index.authority.util.VerifyCodeUtils;
 import com.index.bean.ResultMap;
-import com.index.bean.authority.User;
 
 
 /**
@@ -34,7 +36,10 @@ import com.index.bean.authority.User;
 public class LoginController {
 
 	private Logger logger = Logger.getLogger(LoginController.class);
-
+	
+	@Autowired
+	public ILoginService loginService;
+	
 	@RequestMapping(method = RequestMethod.GET, value = "login")
 	public String login() {
 		return "authority/login";
@@ -43,6 +48,7 @@ public class LoginController {
 	@RequestMapping(value = "submit")
 	@ResponseBody
 	public ResultMap submit(HttpServletResponse response, User user) {
+		loginService.getUserInfo();
 		ResultMap resultMap = new ResultMap();
 		
 		resultMap.setSuccess(true);

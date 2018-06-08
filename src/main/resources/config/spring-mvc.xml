@@ -50,6 +50,7 @@
 	    <mvc:interceptor>
 	        <mvc:mapping path="/**"/>
 	        <mvc:exclude-mapping path="/login"/>
+	        <mvc:exclude-mapping path="/submit"/>
 	        <mvc:exclude-mapping path="/getVerifyCode"/>
 	        <bean class="com.index.interceptor.AuthInterceptor" />
 	    </mvc:interceptor>

@@ -7,9 +7,9 @@ import javax.crypto.spec.SecretKeySpec;
 
 import org.apache.commons.codec.binary.Base64;
 
+import com.index.authority.bean.AuthResult;
+import com.index.authority.bean.User;
 import com.index.bean.ResultMap;
-import com.index.bean.authority.AuthResult;
-import com.index.bean.authority.User;
 import com.index.util.CommonUtil;
 import com.index.util.GsonUtil;
 
@@ -21,11 +21,11 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.SignatureException;
 
 /**
- * Token工具类
+ * 
  * @ClassName: TokenUtil
  * @Description: 
  * @author Zpx
- * @date 2018年4月8日
+ * @date 2018年6月8日
  *
  */
 public class TokenUtil {

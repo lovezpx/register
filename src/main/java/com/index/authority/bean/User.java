@@ -1,4 +1,4 @@
-package com.index.bean.authority;
+package com.index.authority.bean;
 
 public class User {
 	

@@ -1,13 +1,5 @@
 package com.index.interceptor;
 
-import java.io.IOException;
-
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.FilterConfig;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,11 +7,11 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.index.authority.bean.AuthResult;
+import com.index.authority.bean.User;
 import com.index.authority.util.AuthConfig;
 import com.index.authority.util.CookiesUtil;
 import com.index.authority.util.TokenUtil;
-import com.index.bean.authority.AuthResult;
-import com.index.bean.authority.User;
 import com.index.util.GsonUtil;
 
 import io.jsonwebtoken.Claims;
