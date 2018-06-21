@@ -5,7 +5,7 @@
 		getDate : function() {
 			var loginInfo = {};
 
-			loginInfo.username = $("#username").val();
+			loginInfo.username = $("#account").val();
 			loginInfo.password = $("#password").val();
 			loginInfo.remenber = $("#remenber").prop('checked');
 			loginInfo.validateMsg = $("#validateMsg").val();

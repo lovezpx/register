@@ -1,4 +1,4 @@
-package com.index.authority.service;
+package com.index.authority.service.impl;
 
 import java.util.List;
 
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.index.authority.bean.User;
 import com.index.authority.mapper.IAuthorityMapper;
+import com.index.authority.service.ILoginService;
 
 @Service("loginService")
 public class LoginServiceImpl implements ILoginService {

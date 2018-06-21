@@ -42,23 +42,20 @@ public class LoginController {
 	
 	@RequestMapping(method = RequestMethod.GET, value = "login")
 	public String login() {
-		return "authority/login";
+		return "login/login";
 	}
 
 	@RequestMapping(value = "submit")
 	@ResponseBody
-	public ResultMap submit(HttpServletResponse response, User user) {
-		loginService.getUserInfo();
-		ResultMap resultMap = new ResultMap();
-		
-		resultMap.setSuccess(true);
+	public String submit(HttpServletResponse response, User user) {
 		TokenUtil tokenUtil = new TokenUtil();
 		CookiesUtil cookiesUtil = new CookiesUtil();
 		
 		String tokenSub = tokenUtil.getSubject(user);
 		String token = tokenUtil.InitJWT(tokenSub);
 		cookiesUtil.setCookie(response, "token", token, new Long(AuthConfig.JWT_TTL).intValue());
-		return resultMap;
+		
+		return "";
 	}
 
 	@RequestMapping(value = "getVerifyCode")

@@ -31,19 +31,7 @@ import io.jsonwebtoken.SignatureException;
 public class TokenUtil {
 	
 	CommonUtil commonUtil = new CommonUtil();
-	
-	/**
-	 * 获取密钥
-	 * @Title: generalKey
-	 * @Description: 
-	 * @return
-	 * @throws
-	 */
-	public SecretKey generalKey() {
-		byte[] key = Base64.decodeBase64(AuthConfig.JWT_SECERT);
-	    SecretKey secretKey = new SecretKeySpec(key, 0, key.length, "AES");
-	    return secretKey;
-	}
+	EncrypUtil encrypUtil= new EncrypUtil();
 	
 	/**
 	 * 签发JWT
@@ -62,7 +50,7 @@ public class TokenUtil {
 		
 		String jwtId = commonUtil.getGUID();
 		
-		SecretKey secretKey = generalKey();
+		SecretKey secretKey = encrypUtil.generalKey();
 		JwtBuilder builder = Jwts.builder()
 				.setId(jwtId)
 				.setSubject(subject)
@@ -120,7 +108,7 @@ public class TokenUtil {
 	 * @throws
 	 */
 	public Claims parseJWT(String jwt) throws Exception {
-		SecretKey secretKey = generalKey();
+		SecretKey secretKey = encrypUtil.generalKey();
 		return Jwts.parser()
 			.setSigningKey(secretKey)
 			.parseClaimsJws(jwt)

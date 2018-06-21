@@ -25,7 +25,7 @@
 	href="Plugins/font-awesome/css/font-awesome.min.css" />
 <link rel="stylesheet" href="css/authority/login.css">
 <script src="Plugins/jquery/jquery-1.10.1.js"></script>
-<script src="js/authority/login.js"></script>
+<script src="js/login/login.js"></script>
 <script src="Plugins/jquery/jquery.cookie.js" type="text/javascript"></script>
 <script src="js/common/waterUtils.js" type="text/javascript"></script>
 
@@ -48,7 +48,7 @@
 					<p class="errorTip" id="tip"></p>
 					<p class="p-input">
 						<i class="fa fa-user icon-color"></i> <input class="form-control"
-							size="25" id="username" placeholder="请输入账号" />
+							size="25" id="account" placeholder="请输入账号" />
 					</p>
 					<p class="p-input">
 						<i class="fa fa-lock icon-color"></i> <input class="form-control"
